@@ -1,0 +1,78 @@
+graph1.gr (This is a small graph with 250 vertices, nonnegative lengths)
+Number of reachable vertices: 250 out of 250.
+Largest distance: 120 for vertex 131.
+
+Example output:
+
+Testing Bellman-Ford, terminating early, after 6 iterations out of 249
+B-F elapsed time in seconds: 0.006012201309204
+
+Dijkstra elapsed time in seconds: 0.000000000000000
+
+---------------------------------------------------------
+
+graph2.gr (This is a larger graph with 1000 vertices, nonnegative lengths)
+B-F should be faster than Dijkstra, if Ex 9(b) has been implemented.
+
+Number of reachable vertices: 1000 out of 1000.
+Largest distance: 1220 for vertex 780.
+
+Example output:
+
+Testing Bellman-Ford, terminating early, after 3 iterations out of 999
+B-F elapsed time in seconds: 0.015240669250488
+
+Dijkstra elapsed time in seconds: 0.053330659866333
+
+---------------------------------------------------------
+
+graph3.gr (This is a graph with 1000 vertices, nonnegative lengths)
+Dijkstra should be faster than Bellman-Ford if it is implemented efficiently. 
+Number of reachable vertices: 1000 out of 1000.
+Largest distance: 1050 for vertex 949.
+
+Example output:
+
+Bellman-Ford, terminating early, after 950 iterations out of 999
+B-F elapsed time in seconds: 0.663519620895386
+Dijkstra elapsed time in seconds: 0.037296295166016
+
+---------------------------------------------------------
+
+graph4.gr (This is a graph with 100 vertices, with also ***negative lengths***)
+Dijkstra should give a clear notification that there is a negative weight present, if Ex 8 has been implemented.
+Number of reachable vertices: 100 out of 100.
+Largest distance: 11 for vertex 99.
+
+Example output:
+
+Bellman-Ford, terminating early, after 3 iterations out of 99
+Elapsed time in seconds: 0.000000000000000
+
+Dijkstra, **** A negative edge weight is present. ****
+Elapsed time in seconds: 0.000000000000000
+
+---------------------------------------------------------
+
+graph5.gr (This is a graph with 50 vertices, but 6 of them unreachable)
+Number of reachable vertices: 44 out of 50.
+Largest distance: 101 for vertex 40.
+
+Example output:
+
+Bellman-Ford, terminating early, after 6 iterations out of 49
+Elapsed time in seconds: 0.000000000000000
+
+Dijkstra elapsed time in seconds: 0.000000000000000
+
+---------------------------------------------------------
+
+graph6.gr (This is a graph with 100 vertices, but with negative length cycle)
+
+Example output:
+
+**** WARNING ****: A negative weight cycle is present. Cycle edges in reverse order:
+(99,5)(98,99) (97,98) (96,97) (95,96) (94,95) (93,94) (92,93) (91,92) (90,91) (89,90) (88,89) (87,88) (86,87) (85,86) (84,85) (83,84) (82,83) (81,82) (80,81) (79,80) (78,79) (77,78) (76,77) (75,76) (74,75) (73,74) (72,73) (71,72) (70,71) (69,70) (68,69) (67,68) (66,67) (65,66) (64,65) (63,64) (62,63) (61,62) (60,61) (59,60) (58,59) (57,58) (56,57) (20,56) (19,20) (18,19) (17,18) (16,17) (15,16) (14,15) (13,14) (12,13) (11,12) (10,11) (9,10) (8,9) (7,8) (6,7) (5,6)
+Length: -3
+
+(outputting the cycle is not necessary, but a clear message is)
